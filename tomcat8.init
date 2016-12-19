@@ -16,7 +16,7 @@
 
 ## Source function library.
 #. /etc/rc.d/init.d/functions
-export JAVA_HOME=/usr/java/default
+export JAVA_HOME=/
 export JAVA_OPTS="-Dfile.encoding=UTF-8 \
   -Dnet.sf.ehcache.skipUpdateCheck=true \
   -XX:+UseConcMarkSweepGC \
@@ -25,7 +25,7 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8 \
   -XX:MaxPermSize=128m \
   -Xms512m -Xmx512m"
 export PATH=$JAVA_HOME/bin:$PATH
-TOMCAT_HOME=/opt/tomcat-latest
+TOMCAT_HOME=/usr/share/tomcat8
 TOMCAT_USER=tomcat8
 SHUTDOWN_WAIT=20
 
