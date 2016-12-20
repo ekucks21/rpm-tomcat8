@@ -43,7 +43,7 @@ start() {
     echo "Starting tomcat"
     ulimit -n 100000
     umask 007
-    /bin/su -p -s /bin/sh $TOMCAT_USER $TOMCAT_HOME/bin/startup.sh
+    /bin/su -s /bin/sh - $TOMCAT_USER $TOMCAT_HOME/bin/startup.sh
   fi
 
 
