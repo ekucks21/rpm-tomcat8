@@ -18,12 +18,7 @@
 #. /etc/rc.d/init.d/functions
 export JAVA_HOME=/
 export JAVA_OPTS="-Dfile.encoding=UTF-8 \
-  -Dnet.sf.ehcache.skipUpdateCheck=true \
-  -XX:+UseConcMarkSweepGC \
-  -XX:+CMSClassUnloadingEnabled \
-  -XX:+UseParNewGC \
-  -XX:MaxPermSize=128m \
-  -Xms512m -Xmx512m"
+  -Dnet.sf.ehcache.skipUpdateCheck=true"
 export PATH=$JAVA_HOME/bin:$PATH
 TOMCAT_HOME=/usr/share/tomcat8
 TOMCAT_USER=tomcat8
@@ -43,7 +38,7 @@ start() {
     echo "Starting tomcat"
     ulimit -n 100000
     umask 007
-    /bin/su -s /bin/sh - $TOMCAT_USER $TOMCAT_HOME/bin/startup.sh
+    su - $TOMCAT_USER -c $TOMCAT_HOME/bin/startup.sh
   fi
 
 
