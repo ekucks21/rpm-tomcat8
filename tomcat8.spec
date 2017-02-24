@@ -18,14 +18,13 @@
 
 Summary:    Apache Servlet/JSP Engine, RI for Servlet 3.1/JSP 2.3 API
 Name:       tomcat8
-OrigVersion: 8.5.9
 Version:    8.5.9.prag
 BuildArch:  noarch
 Release:    1
 License:    Apache Software License
 Group:      Networking/Daemons
 URL:        http://tomcat.apache.org/
-Source0:    apache-tomcat-%{origversion}.tar.gz
+Source0:    apache-tomcat-%{version}.tar.gz
 Source1:    %{name}.init
 Source2:    %{name}.sysconfig
 Source3:    %{name}.logrotate
